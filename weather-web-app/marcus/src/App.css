@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body,
+#root,
+main,
+.content {
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  background-position: center center;
+  background-size: cover;
+}
+
+main>.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "general . . icon"
+    "indoor barometer moon-phase week-details"
+    "forecast forecast forecast week-details";
+  padding: 30px;
+  gap: 30px;
+}
+
+.content {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.content>div {
+  background-color: #fff2;
+  border-radius: 40px;
+  padding: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.general {
+  grid-area: general;
+}
+
+.icon {
+  grid-area: icon;
+}
+
+.indoor {
+  grid-area: indoor;
+}
+
+.barometer {
+  grid-area: barometer;
+}
+
+.moon-phase {
+  grid-area: moon-phase;
+}
+
+.forecast {
+  grid-area: forecast;
+}
+
+.week-details {
+  grid-area: week-details;
+}
